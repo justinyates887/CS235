@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> test result</title>
+        <style type='text/css'>
+            body { font-family: sans-serif; font-size: 12pt; }
+            .warning { padding: 20px; background: #ffed24; font-size: 12pt; text-align: center; }
+            .result-success { background: #24ff24; font-size: 20px; text-align: center; }
+            .result-failure { background: #ff7095; font-size: 20px; text-align: center; }
+            h2 { font-size: 14pt; font-weight: bold; }
+            h3 { font-size: 12pt; font-weight: bold; }
+            table { background: #ffffff; width: 100%; font-size: 10pt; }
+            table tr.pass { background: #ccffcc; }
+            table tr.fail { background: #ffcccc; }
+            table tr             { font-size: 12pt; border: solid 1px #000066; }
+            table tr td          { padding: 10px; border: solid 1px #000033; }
+            table tr td ul li,             table tr td ol li    { margin: 10px 0; }
+            table tr td ol       { list-style-type: upper-latin; }
+            table tr .test-set   { font-size: 10pt; }
+            table tr .test       { font-size: 10pt; }
+            table tr .prereq     {  }
+            table tr .result     { text-align: center; font-size: 10pt; font-weight: bold; }
+            table tr .expected   { font-family: monospace; font-size: 10pt; }
+            table tr .actual     { font-family: monospace; font-size: 10pt; }
+            table tr .comments   { font-size: 10pt; }
+            table .prereqs { font-size: 8pt; }
+            table .prereqs ul li { margin: 0; }
+            table .prereqs ul { margin: 0; }
+            table tr.summary { background: #000000; color: #ffffff; }
+            table tr.descriptions { font-size: 8pt; text-align: center; }
+            table .spacer { height: 20px; }
+        </style>
+    </head>
+    <body>
+    <div class='warning'>Warning: Make sure to check if all tests finish (there will be a message at the end of the file) - <br>
+    It is possible for your program to crash early, but still show that tests have passed because it hasn't gone through everything.</div>
+<div id='test-list'><h2>Test list:</h2>
+
+<a href='#Constructor()'>Constructor()</a> | <a href='#PopBack()'>PopBack()</a> | <a href='#GetAt()'>GetAt()</a> | <a href='#IsFull()'>IsFull()</a> | <a href='#IsEmpty()'>IsEmpty()</a> | <a href='#PushBack()'>PushBack()</a></div>
+
+<h2>Results:</h2>
+<a name='Constructor()' href='#Constructor()'><h3>Constructor()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_Constructor <br></td>
+<td class='test'>          0a. Check if functions are implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>Prerequisite functions = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>Prerequisite functions = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_Constructor <br></td>
+<td class='test'>          1. Check initial member variable values       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>ARRAY_SIZE = 100</li><li>m_itemCount = 0</li> </ol> </td>
+<td class='actual'>   <ol> <li>ARRAY_SIZE = 100</li><li>m_itemCount = 0</li> </ol> </td>
+<td class='comments'> <ul> <li>When a new SmartFixedArray is created, m_itemCount and should be 0 and ARRAY_SIZE should be 100.</li> </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Constructor:</strong>
+2 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+<a name='PopBack()' href='#PopBack()'><h3>PopBack()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PopBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PopBack</li></ul></div>      
+</td>
+<td class='test'>          0. Check if function PopBack is implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>PopBack = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>PopBack = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PopBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PopBack</li></ul></div>      
+</td>
+<td class='test'>          1. Set up array, remove back       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>m_itemCount = 2</li><li>m_array[0] = "a"</li><li>m_array[1] = "b"</li> </ol> </td>
+<td class='actual'>   <ol> <li>m_itemCount = 2</li><li>m_array[0] = "a"</li><li>m_array[1] = "b"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PopBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PopBack</li></ul></div>      
+</td>
+<td class='test'>          2. ERROR CHECK: Check for exception with empty array       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='comments'> <ul> <li>Array is empty, calling PopBack().</li> </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PopBack:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+<a name='GetAt()' href='#GetAt()'><h3>GetAt()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_GetAt <br><div class='prereqs'>Prerequisite functions: <ul><li>GetAt</li></ul></div>      
+</td>
+<td class='test'>          0. Check if function GetAt is implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>GetAt = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>GetAt = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_GetAt <br><div class='prereqs'>Prerequisite functions: <ul><li>GetAt</li></ul></div>      
+</td>
+<td class='test'>          1. Set up array, get at 1       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>GetAt( 1 ) = "b"</li> </ol> </td>
+<td class='actual'>   <ol> <li>GetAt( 1 ) = "b"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_GetAt <br><div class='prereqs'>Prerequisite functions: <ul><li>GetAt</li></ul></div>      
+</td>
+<td class='test'>          2. ERROR CHECK: Check for exception with invalid index       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='comments'> <ul> <li>ARRAY_SIZE is 100. Calling GetAt( 250 ).</li> </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_GetAt <br><div class='prereqs'>Prerequisite functions: <ul><li>GetAt</li></ul></div>      
+</td>
+<td class='test'>          3. ERROR CHECK: Check for exception when array is empty       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>Exception occurred = true</li> </ol> </td>
+<td class='comments'> <ul> <li>Array is empty. Calling GetAt( 0 ).</li> </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetAt:</strong>
+4 out of 4 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+<a name='IsFull()' href='#IsFull()'><h3>IsFull()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsFull <br><div class='prereqs'>Prerequisite functions: <ul><li>IsFull</li></ul></div>      
+</td>
+<td class='test'>          0. Check if function IsFull is implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsFull = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsFull = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsFull <br><div class='prereqs'>Prerequisite functions: <ul><li>IsFull</li></ul></div>      
+</td>
+<td class='test'>          1. Check if IsFull returns true when full       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsFull() = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsFull() = true</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsFull <br><div class='prereqs'>Prerequisite functions: <ul><li>IsFull</li></ul></div>      
+</td>
+<td class='test'>          2. Check if IsFull returns false when not full       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsFull() = false</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsFull() = false</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsFull:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+<a name='IsEmpty()' href='#IsEmpty()'><h3>IsEmpty()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsEmpty <br><div class='prereqs'>Prerequisite functions: <ul><li>IsEmpty</li></ul></div>      
+</td>
+<td class='test'>          0. Check if function IsEmpty is implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsEmpty = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsEmpty = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsEmpty <br><div class='prereqs'>Prerequisite functions: <ul><li>IsEmpty</li></ul></div>      
+</td>
+<td class='test'>          1. Check if IsEmpty returns false when an item is in the array       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsEmpty = false</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsEmpty = false</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_IsEmpty <br><div class='prereqs'>Prerequisite functions: <ul><li>IsEmpty</li></ul></div>      
+</td>
+<td class='test'>          2. Check if IsEmpty returns true when empty       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>IsEmpty = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>IsEmpty = true</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_IsEmpty:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+<a name='PushBack()' href='#PushBack()'><h3>PushBack()</h3></a>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected <br> output </th>
+            <th class='col_actual'> Actual <br> output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PushBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PushBack</li><li>Resize</li></ul></div>      
+</td>
+<td class='test'>          0a. Check if function PushBack is implemented       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>PushBack = "Implemented"</li> </ol> </td>
+<td class='actual'>   <ol> <li>PushBack = "Implemented"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PushBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PushBack</li><li>Resize</li></ul></div>      
+</td>
+<td class='test'>          1. Add three items, check they're in the correct position       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>m_array = "not nullptr"</li><li>m_array[0] = "a"</li><li>m_array[1] = "b"</li><li>m_array[2] = "c"</li><li>m_itemCount = 3</li><li>m_array[0] = "a"</li><li>m_array[1] = "b"</li><li>m_array[2] = "c"</li> </ol> </td>
+<td class='actual'>   <ol> <li>m_array = "000000910112BBE0"</li><li>m_itemCount = 3</li><li>m_array[0] = "a"</li><li>m_array[1] = "b"</li><li>m_array[2] = "c"</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'>      Test_PushBack <br><div class='prereqs'>Prerequisite functions: <ul><li>PushBack</li><li>Resize</li></ul></div>      
+</td>
+<td class='test'>          2. ERROR CHECK: Check if StructureFullException is thrown if array is full       </td>
+<td class='result'>        passed       </td>
+<td class='expected'> <ol> <li>Exception is thrown = true</li> </ol> </td>
+<td class='actual'>   <ol> <li>Exception is thrown = true</li> </ol> </td>
+<td class='comments'> <ul>  </ul> </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_PushBack:</strong>
+3 out of 3 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+    </table>
+    <div class='result-success'>6 testsets ran; 6 testsets passed</div>
+    </body>
+</html>
